@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Trello</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="titulo">
+            <h1>Trello</h1>
+        </div>
+    </header>
+
+    <section id="conteudo" class=" flex">
+
+        <div id="toDo" class="bloco container">
+            <h2>To Do </h2>
+            <ul>
+                <div draggable="true"  class="tarefas" ondrop="drop(event)" ondragstart="drag(event)" ondragover="allowDrop(event)">
+                <li>Apender Framework</li>
+                    <a href="" target="_blank" class="link"> X </a>
+                </div>
+
+                <div draggable="true" class="tarefas">
+                <li>Fazer café</li>
+                  <a href="" target="_blank" class="link">
+                        X
+                    </a>  
+                </div>    
+                
+                <div draggable="true" class="tarefas">
+                    <li>Iniciar Projeto</li>
+                        <a href="" target="_blank" class="link">
+                            X
+                        </a>
+                </div>
+            </ul>
+
+            <input type="text" placeholder="Adicionar tarefa"//>
+            <button>+</button>
+        </div>
+
+        <div id="doing" class="bloco container">
+            <h2>Doing </h2>
+            <ul>
+                <div draggable="true" class="tarefas" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li>Apendendo HTML</li>
+                    <a href="" target="_blank" class="link">
+                        X
+                    </a>
+                </div>
+            
+                <div draggable="true" class="tarefas">
+                    <li>Aprendendo CSS</li>
+                        <a href="" target="_blank" class="link">
+                            X
+                        </a>  
+                </div>    
+                            
+                <div draggable="true" class="tarefas">
+                    <li>Aprendendo JavaScript</li>
+                        <a href="" target="_blank" class="link">
+                            X
+                        </a>
+                </div>
+
+                <div draggable="true" class="tarefas">
+                    <li>Aprendendo Wordpress</li>
+                        <a href="" target="_blank" class="link">
+                            X
+                            </a>
+                </div>
+            </ul>
+    
+                <input type="text" placeholder="Adicionar tarefa"//>
+                <button>+</button>
+        </div>
+
+        <div id="done" class="bloco container">
+            <h2>Done </h2>
+                <ul>
+                    <div draggable="true" class="tarefas">
+                            <li>Projeto "Trello"</li>
+                                <a href="" target="_blank" class="link">
+                                X
+                                </a>
+                    </div>
+                    
+                    <div draggable="true" class="tarefas">
+                            <li>Passar em LFC</li>
+                                <a href="" target="_blank" class="link"> X </a>
+                    </div>
+
+                    <div draggable="true" class="tarefas">
+                            <li>Estudar para prova de cálculo</li>
+                                <a href="" target="_blank" class="link"> X </a>
+                    </div>
+                   
+                    <div draggable="true" class="tarefas">
+                            <li>Prova de Cálculo</li>
+                              <a href="" target="_blank" class="link">
+                                    X
+                                </a>  
+                    </div>    
+                            
+                    <div draggable="true" class="tarefas">
+                            <li>Planejar próximo projeto</li>
+                                <a href="" target="_blank" class="link">
+                                    X
+                                </a>
+                    </div>
+           
+                    <input type="text" placeholder="Adicionar tarefa"/>
+                    <button>+</button>
+                </ul>
+        
+
+            </div>
+
+        </section>
+    
+    <script src="script.js"></script>    
+    
+</body>
+</html>
