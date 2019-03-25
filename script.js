@@ -9,7 +9,6 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    //event.target.textContent = data;
     ev.target.appendChild(document.getElementById(data));
 }
 
@@ -29,7 +28,7 @@ var toDos = ["Aprender Framework", "Fazer café", "Iniciar Projeto"];
 var doings = ["Aprendendo HTML", "Aprendendo CSS", "Aprendendo JavaScript", "Pesquisando Sobre Bootstrap"];
 var dones = ["Projeto Trello", "Pegar prova de LFC", "Prova de Cálculo", "Prova de Física", "Planejar próximo projeto"];
 
-/*function renderToDos() {
+function renderToDos() {
     toDoListElement.innerHTML = "";
     for(item of toDos) {
         var div = document.createElement("div");
@@ -175,40 +174,3 @@ function removeDone(pos) {
 
     renderDones();
 }
-
-*/
-
-function renderToDos(lista,local) {
-    local.innerHTML = "";
-    for(item of lista) {
-        var div = document.createElement("div");
-        div.setAttribute("class", "tarefas");
-        div.setAttribute("draggable", "true");
-        div.setAttribute("id", "itens")
-        div.setAttribute("ondragstart", "drag(event)")
-        
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(item));
-
-        var link = document.createElement("a");
-        link.setAttribute("href", "#");
-        link.setAttribute("class", "link");
-        link.setAttribute("onclick", `remove(${lista}, ${local}, ${lista.indexOf(item)})`);
-        link.appendChild(document.createTextNode("X"));
-
-        div.appendChild(li);
-        div.appendChild(link)
-        local.appendChild(div);
-
-    }
-}
-
-function remove(lista,local,pos) {
-    lista.splice(pos,1);
-    
-    renderToDos(lista,local)
-}
-
-renderToDos(toDos, toDoListElement);
-renderToDos(doings, doingListElement);
-renderToDos(dones, doneListElement);
